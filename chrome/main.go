@@ -17,12 +17,12 @@ func main() {
 
 	app.Flags = []cli.Flag{}
 
-	app.Commands = []cli.Command{
+	app.Commands = []*cli.Command{
 		{
 			Name:  "deleteExtension",
 			Usage: "Delete extension by file pattern inside of extension",
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  flagPattern,
 					Usage: "File pattern, e.g. walkme*",
 				},
